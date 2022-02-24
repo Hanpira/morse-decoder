@@ -40,6 +40,13 @@ const MORSE_TABLE = {
 
 function decode(expr) {
     // write your solution here
+    let result = [];
+    for (let i = 0; i < expr.length; i += 10) {     /* Each encoded letter's length is 10 */
+        let chars = expr.substr(i, 10);  /* string's length is multiple of 10*/
+        let charsFromMorse = chars.replace(/00/g,'').replace(/10/g,'.').replace(/11/g,'-'); /* Each letter from alphabet encoded with dots(.) and dashes(-). 10 stands for dot(.), 11 stands for dash(-) - we use replace this numbers  */
+        result.push(MORSE_TABLE[charsFromMorse]);
+    }
+    return result.join('');
 
 }
 
