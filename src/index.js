@@ -35,10 +35,12 @@ const MORSE_TABLE = {
     '---..':  '8',
     '----.':  '9',
     '-----':  '0',
+    '**********': ' ',
 };
 
 function decode(expr) {
     // write your solution here
+
 }
 
 module.exports = {
